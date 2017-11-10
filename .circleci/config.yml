@@ -55,5 +55,3 @@ deployment:
     branch: master
     heroku:
       appname: saccotest
-    commands:
-      - git push git@heroku.com:saccotest.git $CIRCLE_SHA1:master
