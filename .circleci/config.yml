@@ -54,6 +54,8 @@ jobs:
           name: Deploy Master to Heroku
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              git config --global user.email "${GIT_EMAIL}"
+              git config --global user.name "${GIT_NAME}"
               git pull heroku master
               git push heroku master
               heroku restart
